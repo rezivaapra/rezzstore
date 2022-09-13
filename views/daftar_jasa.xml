@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="rezzstore_daftarjasa_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Jasa</field>
+        <field name="model">rezzstore.daftarjasa</field>
+        <field name="arch" type="xml">
+            <tree  decoration-danger="status == 'not_ready'" decoration-info="status == 'ready'">
+                <field name="name" />
+                <field name="stok" />
+                <field name="harga_res" />
+                <field name="harga_kon" />
+                <field name="daftargame_id" />
+                <field name="kode_jasa" />
+                <field name="status" decoration-danger="status == 'not_ready'" decoration-success="status == 'ready'" widget="badge" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="rezzstore_daftarjasa_view_form" model="ir.ui.view">
+        <field name="name">Form Daftar Jasa</field>
+        <field name="model">rezzstore.daftarjasa</field>
+        <field name="arch" type="xml">
+            <form string="Daftar Jasa">
+                <header>
+                    <button name="%(rezzstore.ganti_status_action)d" string="Ganti Status" type="action" class="btn btn-success" />
+                    <button name="%(rezzstore.tambah_stok_action)d" string="Tambah Stok" type="action" class="btn btn-info" />
+                    <button name="%(rezzstore.ganti_harga_action)d" string="Ganti Harga" type="action" class="btn btn-warning" />
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="stok" />
+                        <field name="harga_res" />
+                        <field name="harga_kon" />
+                        <field name="daftargame_id" />
+                        <field name="kode_jasa" />
+                        <field name="status" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="rezzstore_jasa_action" model="ir.actions.act_window">
+        <field name="name">Daftar Jasa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rezzstore.daftarjasa</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        id="rezzstore_jasa_menu_act" 
+        name="Daftar Jasa" 
+        parent="rezzstore_game_menu_categ" 
+        action="rezzstore_jasa_action" 
+        sequence="11"
+    />
+</odoo>

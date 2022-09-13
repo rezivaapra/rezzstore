@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="tambah_stok_form" model="ir.ui.view">
+        <field name="name">Tambah Stok</field>
+        <field name="model">rezzstore.tambahstok</field>
+        <field name="arch" type="xml">
+            <form string="Form Tambah Stok">
+                <group>
+                    <field name="jasa_id" />
+                    <field name="stok" />
+                </group>
+                <footer>
+                    <button string="Tambah Stok" name="button_tambah_stok" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="tambah_stok_action" model="ir.actions.act_window">
+        <field name="name">Tambah Stok</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rezzstore.tambahstok</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tambah_stok_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="tambah_stok_menu_action" 
+        name="Tambah Stok" 
+        parent="rezzstore_update_menu_categ" 
+        action="tambah_stok_action" 
+        sequence="11"
+        />
+</odoo>

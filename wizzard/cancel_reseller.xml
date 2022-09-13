@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cancel_reseller_form" model="ir.ui.view">
+        <field name="name">Cancel Penjualan Reseller</field>
+        <field name="model">rezzstore.cancelreseller</field>
+        <field name="arch" type="xml">
+            <form string="Form Cancel Penjualan Reseller">
+                <group>
+                    <field name="nama_id" />
+                </group>
+                <footer>
+                    <button string="Cancel Transaksi" name="button_cancel_reseller" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="cancel_reseller_action" model="ir.actions.act_window">
+        <field name="name">Cancel Penjualan Reseller</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rezzstore.cancelreseller</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="cancel_reseller_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="cancel_reseller_menu_action" 
+        name="Cancel Penjualan Reseller" 
+        parent="rezzstore_admin_menu_categ" 
+        action="cancel_reseller_action" 
+        sequence="10"
+        />
+</odoo>

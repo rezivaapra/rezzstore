@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ganti_status_form" model="ir.ui.view">
+        <field name="name">Ganti Status</field>
+        <field name="model">rezzstore.gantistatus</field>
+        <field name="arch" type="xml">
+            <form string="Form Ganti Status">
+                <group>
+                    <field name="jasa_id" />
+                    <field name="status" />
+                </group>
+                <footer>
+                    <button string="Ganti Status" name="button_ganti_status" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ganti_status_action" model="ir.actions.act_window">
+        <field name="name">Ganti Status</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rezzstore.gantistatus</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="ganti_status_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="ganti_status_menu_action" 
+        name="Ganti Status" 
+        parent="rezzstore_update_menu_categ" 
+        action="ganti_status_action" 
+        sequence="10"
+        />
+</odoo>

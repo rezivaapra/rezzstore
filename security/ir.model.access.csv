@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rezzstore_daftargame,access.rezzstore.daftargame,model_rezzstore_daftargame,,1,1,1,1
+access_rezzstore_daftarjasa,access.rezzstore.daftarjasa,model_rezzstore_daftarjasa,,1,1,1,1
+access_rezzstore_reseller,access.rezzstore.reseller,model_rezzstore_reseller,,1,1,1,1
+access_rezzstore_penjualanreseller,access.rezzstore.penjualanreseller,model_rezzstore_penjualanreseller,,1,1,1,1
+access_rezzstore_detailreseller,access.rezzstore.detailreseller,model_rezzstore_detailreseller,,1,1,1,1
+access_rezzstore_penjualankonsumen,access.rezzstore.penjualankonsumen,model_rezzstore_penjualankonsumen,,1,1,1,1
+access_rezzstore_detailkonsumen,access.rezzstore.detailkonsumen,model_rezzstore_detailkonsumen,,1,1,1,1
+access_rezzstore_gantistatus,access.rezzstore.gantistatus,model_rezzstore_gantistatus,,1,1,1,1
+access_rezzstore_tambahstok,access.rezzstore.tambahstok,model_rezzstore_tambahstok,,1,1,1,1
+access_rezzstore_gantiharga,access.rezzstore.gantiharga,model_rezzstore_gantiharga,,1,1,1,1
+access_rezzstore_cancelreseller,access.rezzstore.cancelreseller,model_rezzstore_cancelreseller,,1,1,1,1
+access_rezzstore_cancelkonsumen,access.rezzstore.cancelkonsumen,model_rezzstore_cancelkonsumen,,1,1,1,1

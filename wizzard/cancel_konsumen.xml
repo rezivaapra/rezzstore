@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cancel_konsumen_form" model="ir.ui.view">
+        <field name="name">Cancel Penjualan Konsumen</field>
+        <field name="model">rezzstore.cancelkonsumen</field>
+        <field name="arch" type="xml">
+            <form string="Form Cancel Penjualan Konsumen">
+                <group>
+                    <field name="nama_id" />
+                </group>
+                <footer>
+                    <button string="Cancel Transaksi" name="button_cancel_konsumen" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="cancel_konsumen_action" model="ir.actions.act_window">
+        <field name="name">Cancel Penjualan Konsumen</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rezzstore.cancelkonsumen</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="cancel_konsumen_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="cancel_konsumen_menu_action" 
+        name="Cancel Penjualan Konsumen" 
+        parent="rezzstore_admin_menu_categ" 
+        action="cancel_konsumen_action" 
+        sequence="11"
+        />
+</odoo>

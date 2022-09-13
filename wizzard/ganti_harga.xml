@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ganti_harga_form" model="ir.ui.view">
+        <field name="name">Ganti Harga</field>
+        <field name="model">rezzstore.gantiharga</field>
+        <field name="arch" type="xml">
+            <form string="Form Ganti Status">
+                <group>
+                    <field name="jasa_id" />
+                    <field name="jenis" />
+                    <field name="harga" />
+                </group>
+                <footer>
+                    <button string="Ganti Harga" name="button_ganti_harga" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ganti_harga_action" model="ir.actions.act_window">
+        <field name="name">Ganti Harga</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rezzstore.gantiharga</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="ganti_harga_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="ganti_harga_menu_action" 
+        name="Ganti Harga" 
+        parent="rezzstore_update_menu_categ" 
+        action="ganti_harga_action" 
+        sequence="12"
+        />
+</odoo>
