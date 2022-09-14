@@ -32,7 +32,7 @@ class GantiStatus(models.TransientModel):
     
     def button_ganti_status(self):
         for rec in self:
-            self.env['rezzstore.daftarjasa'].search([('id', '=', rec.jasa_id.id)]) .write({'status': rec.status})
+            self.env['rezzstore.daftarjasa'].search([('id', '=', rec.jasa_id.id)]).write({'status': rec.status})
         return {
             'type': 'ir.actions.client', 
             'tag': 'reload'

@@ -34,7 +34,7 @@ class BerikanRating(models.TransientModel):
 
     def button_berikan_rating(self):
         for rec in self:
-            self.env['rezzstore.penjualankonsumen'].search([('id', '=', rec.nama_id.id)]) .write({'rating' : rec.rating})
+            self.env['rezzstore.penjualankonsumen'].search([('id', '=', rec.nama_id.id)]).write({'rating' : rec.rating})
         return {
             'type': 'ir.actions.client', 
             'tag': 'reload'

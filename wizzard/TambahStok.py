@@ -26,7 +26,7 @@ class TambahStok(models.TransientModel):
 
     def button_tambah_stok(self):
         for rec in self:
-            self.env['rezzstore.daftarjasa'].search([('id', '=', rec.jasa_id.id)]) .write({'stok': rec.jasa_id.stok + rec.stok})
+            self.env['rezzstore.daftarjasa'].search([('id', '=', rec.jasa_id.id)]).write({'stok': rec.jasa_id.stok + rec.stok})
         return {
             'type': 'ir.actions.client', 
             'tag': 'reload'

@@ -20,7 +20,7 @@ class CancelKonsumen(models.TransientModel):
 
     def button_cancel_konsumen(self):
         for rec in self:
-            self.env['rezzstore.penjualankonsumen'].search([('id', '=', rec.nama_id.id)]) .write({'state': 'cancel'})
+            self.env['rezzstore.penjualankonsumen'].search([('id', '=', rec.nama_id.id)]).write({'state': 'cancel'})
         return {
             'type': 'ir.actions.client', 
             'tag': 'reload'

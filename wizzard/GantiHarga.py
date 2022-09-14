@@ -33,7 +33,7 @@ class GantiHarga(models.TransientModel):
 
     def button_ganti_harga(self):
         for rec in self:
-            self.env['rezzstore.daftarjasa'].search([('id', '=', rec.jasa_id.id)]) .write({rec.jenis : rec.harga})
+            self.env['rezzstore.daftarjasa'].search([('id', '=', rec.jasa_id.id)]).write({rec.jenis : rec.harga})
         return {
             'type': 'ir.actions.client', 
             'tag': 'reload'
