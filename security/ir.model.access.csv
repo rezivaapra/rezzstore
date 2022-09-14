@@ -11,3 +11,5 @@ access_rezzstore_tambahstok,access.rezzstore.tambahstok,model_rezzstore_tambahst
 access_rezzstore_gantiharga,access.rezzstore.gantiharga,model_rezzstore_gantiharga,,1,1,1,1
 access_rezzstore_cancelreseller,access.rezzstore.cancelreseller,model_rezzstore_cancelreseller,,1,1,1,1
 access_rezzstore_cancelkonsumen,access.rezzstore.cancelkonsumen,model_rezzstore_cancelkonsumen,,1,1,1,1
+access_rezzstore_rating,access.rezzstore.rating,model_rezzstore_rating,,1,1,1,1
+access_rezzstore_reset,access.rezzstore.reset,model_rezzstore_reset,,1,1,1,1

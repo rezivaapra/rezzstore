@@ -36,14 +36,20 @@
                     <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done" />
                 </header>
                 <sheet>
-                    <group>
+                    <h1>
                         <field name="trx_seq" />
-                        <field name="daftarreseller_id" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
-                        <field name="name" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
-                        <field name="no_wa" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
-                        <field name="email" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
-                        <field name="tgl_trx" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
-                        <field name="total_bayar" />
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="daftarreseller_id" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
+                            <field name="tgl_trx" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
+                            <field name="total_bayar" />
+                        </group>
+                        <group>
+                            <field name="name" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
+                            <field name="no_wa" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
+                            <field name="email" attrs="{'readonly' : [('state', '!=', 'draft')]}" />
+                        </group>
                     </group>
                     <group name="daftarjasa" string="Daftar Jasa">
                         <field name="detailpenjualan_ids">

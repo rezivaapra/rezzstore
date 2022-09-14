@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="reset_rating_form" model="ir.ui.view">
+        <field name="name">Reset Rating</field>
+        <field name="model">rezzstore.reset</field>
+        <field name="arch" type="xml">
+            <form string="Form Reset Rating">
+                <group>
+                    <field name="nama_id" />
+                    <field name="rating" widget="priority" />
+                </group>
+                <footer>
+                    <button string="Reset Rating" name="button_reset_rating" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="reset_rating_action" model="ir.actions.act_window">
+        <field name="name">Reset Rating</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rezzstore.reset</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="reset_rating_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="reset_rating_menu_action" 
+        name="Reset Rating" 
+        parent="rezzstore_admin_menu_categ" 
+        action="reset_rating_action" 
+        sequence="12"
+        />
+</odoo>

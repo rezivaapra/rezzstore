@@ -28,9 +28,16 @@
     />
 
     <menuitem 
-        id="rezzstore_admin_menu_categ"
-        name="Admin"
+        id="rezzstore_konsumen_menu_categ"
+        name="Menu Konsumen"
         parent="rezzstore_menu_root"
         sequence="14"
+    />
+
+    <menuitem 
+        id="rezzstore_admin_menu_categ"
+        name="Menu Admin"
+        parent="rezzstore_menu_root"
+        sequence="15"
     />
 </odoo>

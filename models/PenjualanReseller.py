@@ -18,7 +18,7 @@ class PenjualanReseller(models.Model):
         'rezzstore.reseller', 
         string='Nama Reseller'
     )
-    name = fields.Char(string='Name Konsumen')
+    name = fields.Char(string='Nama Konsumen')
     no_wa = fields.Char(string='No. WhatsApp Konsumen')
     email = fields.Char(string='E-Mail Konsumen')
     tgl_trx = fields.Datetime(

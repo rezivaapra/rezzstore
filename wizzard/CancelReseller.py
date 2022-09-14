@@ -20,7 +20,7 @@ class CancelReseller(models.TransientModel):
 
     def button_cancel_reseller(self):
         for rec in self:
-            self.env['rezzstore.penjualanreseller'].search([('id', '=', rec.nama_id.id)]) .write({'state': 'cancel'})
+            self.env['rezzstore.penjualanreseller'].search([('id', '=', rec.nama_id.id)]).write({'state': 'cancel'})
         return {
             'type': 'ir.actions.client', 
             'tag': 'reload'

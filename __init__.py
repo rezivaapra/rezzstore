@@ -4,3 +4,4 @@ from . import controllers
 from . import models
 from . import security
 from . import wizzard
+from . import report

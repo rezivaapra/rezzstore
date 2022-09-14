@@ -26,6 +26,20 @@ class PenjualanKonsumen(models.Model):
         compute='_compute_totalbayar',
         string='Total Pembayaran'
     )
+    rating = fields.Selection(
+        string='Rate me', 
+        selection=[
+            ('0', 'Very Low'),
+            ('1', 'Low'),
+            ('2', 'Normal'),
+            ('3', 'High'),
+            ('4', 'Very High'),
+            ('5', 'Excellent'),
+        ],
+        required=True,
+        readonly=True,
+        default='0'
+    )
     detailpenjualan_ids = fields.One2many(
         comodel_name='rezzstore.detailkonsumen',
         inverse_name='penjualan_id',
@@ -41,7 +55,8 @@ class PenjualanKonsumen(models.Model):
         ],
         required=True,
         readonly=True,
-        default='draft')
+        default='draft'
+    )
     
     def action_confirm(self):
         self.write({'state': 'confirm'})
@@ -58,7 +73,7 @@ class PenjualanKonsumen(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('trx_seq', 'New') == 'New':
-            vals['trx_seq'] = self.env['ir.sequence'].next_by_code('trx.kon1.sequence') or 'New'
+            vals['trx_seq'] = self.env['ir.sequence'].next_by_code('trx.kon.sequence') or 'New'
         result = super(PenjualanKonsumen, self).create(vals)
         return result
     

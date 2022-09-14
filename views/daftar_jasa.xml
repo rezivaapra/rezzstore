@@ -28,13 +28,17 @@
                 </header>
                 <sheet>
                     <group>
-                        <field name="name" />
-                        <field name="stok" />
-                        <field name="harga_res" />
-                        <field name="harga_kon" />
-                        <field name="daftargame_id" />
-                        <field name="kode_jasa" />
-                        <field name="status" />
+                        <group>
+                            <field name="name" />
+                            <field name="stok" />
+                            <field name="harga_res" />
+                            <field name="harga_kon" />
+                        </group>
+                        <group>
+                            <field name="daftargame_id" />
+                            <field name="kode_jasa" />
+                            <field name="status" />
+                        </group>
                     </group>
                 </sheet>
             </form>

@@ -20,10 +20,28 @@
             <form string="Daftar Game">
                 <sheet>
                     <group>
-                        <field name="name" />
-                        <field name="tgl_join" />
-                        <field name="no_hp" />
-                        <field name="email" />
+                        <group>
+                            <h1>
+                                <field name="name" placeholder="Nama"/>
+                            </h1>
+                        </group>
+                        <group>
+                            <h1>
+                                <field name="foto" widget="image" class="oe_avatar" />
+                            </h1>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="gender" />
+                            <field name="tgl_lahir" />
+                            <field name="alamat" />
+                        </group>
+                        <group>
+                            <field name="tgl_join" />
+                            <field name="no_hp" />
+                            <field name="email" />
+                        </group>
                     </group>
                 </sheet>
             </form>

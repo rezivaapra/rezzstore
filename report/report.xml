@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_faktur_reseller_pdf" model="ir.actions.report">
+        <field name="name">Print Faktur Reseller</field>
+        <field name="model">rezzstore.penjualanreseller</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rezzstore.faktur_reseller_pdf</field>
+        <field name="report_file">rezzstore.faktur_reseller_pdf</field>
+        <field name="binding_model_id" ref="model_rezzstore_penjualanreseller"/>
+        <field name="binding_type">report</field>
+    </record>
+    <record id="report_faktur_konsumen_pdf" model="ir.actions.report">
+        <field name="name">Print Faktur Konsumen</field>
+        <field name="model">rezzstore.penjualankonsumen</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rezzstore.faktur_konsumen_pdf</field>
+        <field name="report_file">rezzstore.faktur_konsumen_pdf</field>
+        <field name="binding_model_id" ref="model_rezzstore_penjualankonsumen"/>
+        <field name="binding_type">report</field>
+    </record>
+    <record id="report_daftar_reseller_pdf" model="ir.actions.report">
+        <field name="name">Print Data Reseller</field>
+        <field name="model">rezzstore.reseller</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rezzstore.daftar_reseller_pdf</field>
+        <field name="report_file">rezzstore.daftar_reseller_pdf</field>
+        <field name="binding_model_id" ref="model_rezzstore_reseller"/>
+        <field name="binding_type">report</field>
+    </record>
+    <record id="report_resellercard_xlsx" model="ir.actions.report">
+        <field name="name">Print Reseller Card (xlsx)</field>
+        <field name="model">rezzstore.reseller</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">rezzstore.report_resellercard_xlsx</field>
+        <field name="report_file">rezzstore.report_resellercard_xlsx</field>
+        <field name="binding_model_id" ref="model_rezzstore_reseller"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

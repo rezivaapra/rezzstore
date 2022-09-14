@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'report_xlsx'],
 
     # always loaded
     'data': [
@@ -38,6 +38,12 @@
         'wizzard/ganti_harga.xml',
         'wizzard/cancel_reseller.xml',
         'wizzard/cancel_konsumen.xml',
+        'wizzard/berikan_rating.xml',
+        'wizzard/reset_rating.xml',
+        'report/report.xml',
+        'report/print_faktur_reseller.xml',
+        'report/print_faktur_konsumen.xml',
+        'report/print_reseller.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
